@@ -1,0 +1,14 @@
+{
+  "name": "main_cartesian",
+  "category": "main experiment",
+  "commands": [
+    [
+      "${PYTHON}",
+      "inference/run_OURS_CARTESIAN_LLM10_CRITIC_RERANK.py"
+    ]
+  ],
+  "requires": [
+    "outputs/table1_ours_v10_compact_fixedtest100",
+    "CRITIC_URL"
+  ]
+}

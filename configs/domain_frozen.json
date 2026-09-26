@@ -1,0 +1,21 @@
+{
+  "name": "domain_frozen",
+  "category": "domain generalization",
+  "commands": [
+    [
+      "${PYTHON}",
+      "experiments/domain_generalization/frozen/run.py",
+      "prepare"
+    ],
+    [
+      "${PYTHON}",
+      "experiments/domain_generalization/frozen/run.py",
+      "ours"
+    ]
+  ],
+  "requires": [
+    "experiments/domain_generalization/frozen/inputs.json",
+    "checkpoints/generative_v10_compact",
+    "CRITIC_URL"
+  ]
+}

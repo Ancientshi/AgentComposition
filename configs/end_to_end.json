@@ -1,0 +1,21 @@
+{
+  "name": "end_to_end",
+  "category": "end-to-end",
+  "commands": [
+    [
+      "${PYTHON}",
+      "experiments/end_to_end/run_experiment.py",
+      "--workers",
+      "6"
+    ]
+  ],
+  "requires": [
+    "outputs/end_to_end/inventory.json",
+    "outputs/end_to_end/queries.json",
+    "outputs/end_to_end/recommendations",
+    "OPENAI_BASE_URL",
+    "BACKBONE_BASE_URL",
+    "NATIVE_TOOL_URL"
+  ],
+  "paid_api": true
+}

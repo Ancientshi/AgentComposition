@@ -1,0 +1,40 @@
+{
+  "name": "structural",
+  "category": "structural ablation",
+  "commands": [
+    [
+      "${PYTHON}",
+      "experiments/structural/run_variants.py",
+      "--variant",
+      "Free"
+    ],
+    [
+      "${PYTHON}",
+      "experiments/structural/run_variants.py",
+      "--variant",
+      "Greedy"
+    ],
+    [
+      "${PYTHON}",
+      "experiments/structural/run_variants.py",
+      "--variant",
+      "Beam+Critic",
+      "--final_mode",
+      "raw"
+    ],
+    [
+      "${PYTHON}",
+      "experiments/structural/run_variants.py",
+      "--variant",
+      "BeamReplay",
+      "--final_mode",
+      "raw"
+    ]
+  ],
+  "requires": [
+    "outputs/baseline4_rag_llama_instruct_seed42_n100",
+    "checkpoints/generative_v10_compact",
+    "CRITIC_URL"
+  ],
+  "note": "Beam/Critic/Cartesian cached-pool variants and aggregation are separately documented."
+}

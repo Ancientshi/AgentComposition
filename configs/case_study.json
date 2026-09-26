@@ -1,0 +1,18 @@
+{
+  "name": "case_study",
+  "category": "case study",
+  "commands": [
+    [
+      "${PYTHON}",
+      "experiments/case_study/extract_case.py"
+    ],
+    [
+      "${PYTHON}",
+      "experiments/case_study/build_figure.py"
+    ]
+  ],
+  "requires": [
+    "outputs/end_to_end/recommendations/question_5656.json",
+    "outputs/case_study/followup"
+  ]
+}

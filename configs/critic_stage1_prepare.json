@@ -1,0 +1,13 @@
+{
+  "name": "critic_stage1_prepare",
+  "category": "training",
+  "commands": [
+    [
+      "${PYTHON}",
+      "training/critic/stage1/prepare_cases.py"
+    ]
+  ],
+  "requires": [
+    "datasets/generative_v10_compact"
+  ]
+}

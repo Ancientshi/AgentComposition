@@ -1,0 +1,14 @@
+{
+  "name": "generator_controls",
+  "category": "controls",
+  "commands": [
+    [
+      "${PYTHON}",
+      "experiments/generator_controls/run_v4_controls.py"
+    ]
+  ],
+  "requires": [
+    "frozen RAG and historical-bundle candidate caches",
+    "CRITIC_URL"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "critic_stage2_prepare",
+  "category": "training",
+  "commands": [
+    [
+      "${PYTHON}",
+      "training/critic/stage2/prepare.py",
+      "--v3-root",
+      "training/critic/stage1",
+      "--source-data",
+      "datasets/generative_v10_compact",
+      "--output",
+      "datasets/critic_stage2"
+    ]
+  ],
+  "requires": [
+    "datasets/critic_stage1",
+    "datasets/generative_v10_compact"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "critic_stage1_label",
+  "category": "training",
+  "commands": [
+    [
+      "${PYTHON}",
+      "training/critic/stage1/label_terra.py",
+      "--workers",
+      "3"
+    ]
+  ],
+  "requires": [
+    "datasets/critic_stage1",
+    "OPENAI_BASE_URL"
+  ],
+  "paid_api": true
+}

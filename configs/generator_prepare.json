@@ -1,0 +1,21 @@
+{
+  "name": "generator_prepare",
+  "category": "training",
+  "description": "Traceable labels and candidate-preserving compact prompts.",
+  "commands": [
+    [
+      "${PYTHON}",
+      "training/generator/prepare_sft.py",
+      "--root",
+      "${ROOT}",
+      "--tokenizer",
+      "${BASE_MODEL}"
+    ]
+  ],
+  "requires": [
+    "datasets/PartII",
+    "datasets/PartIII",
+    "datasets/generative_v9_sft",
+    "outputs/table1_ours_seed42_n100_beam1-2_critic05_finalonly/sample_manifest.jsonl"
+  ]
+}

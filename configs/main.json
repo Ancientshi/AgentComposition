@@ -1,0 +1,22 @@
+{
+  "name": "main",
+  "category": "main experiment",
+  "commands": [
+    [
+      "${PYTHON}",
+      "training/generator/run_infer_table1_compact.py",
+      "--model_dir",
+      "checkpoints/generative_v10_compact",
+      "--base_model",
+      "${BASE_MODEL}",
+      "--critic_url",
+      "${CRITIC_URL}"
+    ]
+  ],
+  "requires": [
+    "outputs/baseline4_rag_llama_instruct_seed42_n100",
+    "checkpoints/generative_v10_compact",
+    "CRITIC_URL"
+  ],
+  "note": "Generator-only beam pruning followed by hybrid final scoring. Cartesian reranking is a separate entry."
+}

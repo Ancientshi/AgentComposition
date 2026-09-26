@@ -1,0 +1,14 @@
+{
+  "name": "critic_stage1_train",
+  "category": "training",
+  "commands": [
+    [
+      "${PYTHON}",
+      "training/critic/stage1/train.py"
+    ]
+  ],
+  "requires": [
+    "datasets/critic_stage1",
+    "EASYREC_MODEL"
+  ]
+}

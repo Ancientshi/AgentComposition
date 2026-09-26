@@ -1,0 +1,13 @@
+{
+  "name": "end_to_end_analyze",
+  "category": "end-to-end",
+  "commands": [
+    [
+      "${PYTHON}",
+      "experiments/end_to_end/analyze_results.py"
+    ]
+  ],
+  "requires": [
+    "outputs/end_to_end/trials"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "domain_quickadapt_infer",
+  "category": "domain generalization",
+  "commands": [
+    [
+      "${PYTHON}",
+      "experiments/domain_generalization/quickadapt/infer.py",
+      "--job",
+      "${ADAPT_JOB}",
+      "--split",
+      "test"
+    ]
+  ],
+  "requires": [
+    "experiments/domain_generalization/quickadapt/data"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "critic_stage2_train",
+  "category": "training",
+  "commands": [
+    [
+      "${PYTHON}",
+      "training/critic/stage2/train.py",
+      "--data",
+      "datasets/critic_stage2",
+      "--v3-root",
+      "training/critic/stage1",
+      "--checkpoint",
+      "checkpoints/bundle_critic_terra_v3/best_critic.pt",
+      "--base-model",
+      "${EASYREC_MODEL}",
+      "--easyrec-code",
+      "models/easyrec",
+      "--critic-code",
+      "models",
+      "--output",
+      "checkpoints/bundle_critic_reference_v4",
+      "--epochs",
+      "2"
+    ]
+  ],
+  "requires": [
+    "datasets/critic_stage2",
+    "checkpoints/bundle_critic_terra_v3",
+    "EASYREC_MODEL"
+  ],
+  "note": "Uses the stage-1 checkpoint to train the V4 critic for two epochs; see docs/TRAINING.md for checkpoint selection."
+}

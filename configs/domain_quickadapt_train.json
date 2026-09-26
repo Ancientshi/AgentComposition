@@ -1,0 +1,16 @@
+{
+  "name": "domain_quickadapt_train",
+  "category": "domain generalization",
+  "commands": [
+    [
+      "${PYTHON}",
+      "experiments/domain_generalization/quickadapt/train.py",
+      "--job",
+      "${ADAPT_JOB}"
+    ]
+  ],
+  "requires": [
+    "experiments/domain_generalization/quickadapt/data",
+    "checkpoints/generative_v10_compact"
+  ]
+}

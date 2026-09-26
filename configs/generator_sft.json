@@ -1,0 +1,25 @@
+{
+  "name": "generator_sft",
+  "category": "training",
+  "description": "Generator SFT: 1 epoch, LR 1e-4, LoRA r16/alpha32.",
+  "commands": [
+    [
+      "${PYTHON}",
+      "-m",
+      "torch.distributed.run",
+      "--nproc_per_node",
+      "4",
+      "training/generator/train_sft.py",
+      "--data_dir",
+      "datasets/generative_v10_compact",
+      "--output_dir",
+      "checkpoints/generative_v10_compact",
+      "--model_name",
+      "${BASE_MODEL}"
+    ]
+  ],
+  "requires": [
+    "datasets/generative_v10_compact",
+    "BASE_MODEL"
+  ]
+}
